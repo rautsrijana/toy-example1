@@ -1,0 +1,16 @@
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/srijana/toy-example1/notebook
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://localhost:8889/?token=5e8b4122a0851f1ba0e548c1b5cc4818d0ee0a2ddb7dffda
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=5e8b4122a0851f1ba0e548c1b5cc4818d0ee0a2ddb7dffda
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | ERROR] The version of the Assignment List nbextension does not match the server extension; the nbextension version is 0.6.1 while the server version is 0.5.5. This can happen if you have recently upgraded nbgrader, and may cause this extension to not work correctly. To fix the problem, please see the nbgrader installation instructions: http://nbgrader.readthedocs.io/en/stable/user_guide/installation.html
+[NotebookApp | INFO] Kernel started: 284e1db0-de5e-4bab-b233-3237c28975c7
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 284e1db0-de5e-4bab-b233-3237c28975c7
