@@ -25,7 +25,7 @@ from evaluate import evaluate
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_dir', default='data/256x256_testset',
                     help="Directory containing the dataset")
-parser.add_argument('--model_dir', default='ml/experiments/',
+parser.add_argument('--model_dir', default='ml/experiments/resnet',
                     help="Directory containing params.json")
 parser.add_argument('--restore_file', default=None,
                     help="Optional, name of the file in --model_dir containing weights to reload before \
