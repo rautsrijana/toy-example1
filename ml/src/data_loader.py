@@ -64,7 +64,7 @@ class BallotDataset(Dataset):
         """
         image = Image.open(self.filenames[idx]).convert("RGB")  # PIL image
         image = self.transform(image)
-        return image, transforms.ToTensor(self.labels[idx])
+        return image, self.labels[idx]
 
 
 def fetch_dataloader(types, data_dir, params):
