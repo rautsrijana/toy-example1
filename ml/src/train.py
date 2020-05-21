@@ -144,6 +144,7 @@ def train_and_evaluate(model, train_dataloader, val_dataloader, optimizer, loss_
 
 
 if __name__ == '__main__':
+    args = parser.parse_args()
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     num_classes = 48
     feature_extract = True
@@ -166,14 +167,13 @@ if __name__ == '__main__':
     loss_fn = nn.CrossEntropyLoss()
     optimizer_ft = optim.SGD(params_to_update, lr=0.001, momentum=0.9)
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)
-
-    params = utils.Params("./ml/experiments/params.json")
+    utils.set_logger(os.path.join(args.model_dir, 'train.log'))
+    params = utils.Params("./ml/experiments/resnet/params.json")
     data_dir = 'data/256x256_testset'
     dataloaders = data_loader.fetch_dataloader(
         ['train', 'val'], data_dir, params)
     train_dl = dataloaders['train']
     val_dl = dataloaders['train']
 
-    args = parser.parse_args()
     train_and_evaluate(model_ft, train_dl, val_dl, optimizer_ft, loss_fn, net.metrics, params,
             args.model_dir, args.restore_file)

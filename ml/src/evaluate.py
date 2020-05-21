@@ -29,6 +29,8 @@ def evaluate(model, loss_fn, dataloader, metrics, params):
         params: (Params) hyperparameters
         num_steps: (int) number of batches to train on, each of size params.batch_size
     """
+    device = torch.device("cuda:0" if params.cuda else "cpu")
+    model.to(device)
 
     # set model to evaluation mode
     model.eval()
