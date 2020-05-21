@@ -3,19 +3,25 @@ import os
 
 import pandas as pd
 from PIL import Image
+import torch
 from torch.utils.data import Dataset, DataLoader
 import torchvision.transforms as transforms
 
 
+normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                 std=[0.229, 0.224, 0.225])
+
 train_transformer = transforms.Compose([
         transforms.Resize(224),
         transforms.RandomHorizontalFlip(),
-        transforms.ToTensor()
+        transforms.ToTensor(),
+        normalize
     ])
 
 eval_transformer = transforms.Compose([
         transforms.Resize(224),
-        transforms.ToTensor()
+        transforms.ToTensor(),
+        normalize
     ])
 
 
@@ -56,9 +62,9 @@ class BallotDataset(Dataset):
             image: (Tensor) transformed image
             label: (int) corresponding label of image
         """
-        image = Image.open(self.filenames[idx])  # PIL image
+        image = Image.open(self.filenames[idx]).convert("RGB")  # PIL image
         image = self.transform(image)
-        return image, self.labels[idx]
+        return image, transforms.ToTensor(self.labels[idx])
 
 
 def fetch_dataloader(types, data_dir, params):
