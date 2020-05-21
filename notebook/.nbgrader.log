@@ -14,3 +14,9 @@
 [NotebookApp | ERROR] The version of the Assignment List nbextension does not match the server extension; the nbextension version is 0.6.1 while the server version is 0.5.5. This can happen if you have recently upgraded nbgrader, and may cause this extension to not work correctly. To fix the problem, please see the nbgrader installation instructions: http://nbgrader.readthedocs.io/en/stable/user_guide/installation.html
 [NotebookApp | INFO] Kernel started: 284e1db0-de5e-4bab-b233-3237c28975c7
 [NotebookApp | INFO] Adapting to protocol v5.1 for kernel 284e1db0-de5e-4bab-b233-3237c28975c7
+[NotebookApp | INFO] Saving file at /08_SR_V0.ipynb
+[NotebookApp | INFO] Starting buffering for 284e1db0-de5e-4bab-b233-3237c28975c7:4DC8E5D99A244C92855BA53024F2DC47
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down 1 kernel
+[NotebookApp | INFO] Kernel shutdown: 284e1db0-de5e-4bab-b233-3237c28975c7
